@@ -1,51 +1,23 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Slider functionality
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const sliderNextBtn = document.querySelector('.slider-next-btn');
-    const sliderPrevBtn = document.querySelector('.slider-prev-btn');
+// JavaScript for services section navigation buttons
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
-        });
-    }
+const prevBtn = document.querySelector('.services-prev-btn');
+const nextBtn = document.querySelector('.services-next-btn');
+const servicesContainer = document.querySelector('.services-container');
 
-    sliderNextBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
+let scrollStep = servicesContainer.clientWidth;
+
+prevBtn.addEventListener('click', () => {
+    servicesContainer.scrollBy({
+        top: 0,
+        left: -scrollStep,
+        behavior: 'smooth'
     });
+});
 
-    sliderPrevBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    });
-
-    showSlide(currentSlide);
-
-    // Services functionality
-    const servicesContent = document.querySelector('.services-content');
-    const servicesNextBtn = document.querySelector('.services-next-btn');
-    const servicesPrevBtn = document.querySelector('.services-prev-btn');
-
-    servicesNextBtn.addEventListener('click', () => {
-        servicesContent.scrollLeft += servicesContent.clientWidth;
-    });
-
-    servicesPrevBtn.addEventListener('click', () => {
-        servicesContent.scrollLeft -= servicesContent.clientWidth;
-    });
-
-    // Side menu functionality
-    const sideMenu = document.getElementById('side-menu');
-    const menuBtn = document.getElementById('menu-btn');
-    const closeBtn = document.getElementById('close-btn');
-
-    menuBtn.addEventListener('click', () => {
-        sideMenu.style.left = '0';
-    });
-
-    closeBtn.addEventListener('click', () => {
-        sideMenu.style.left = '-300px';
+nextBtn.addEventListener('click', () => {
+    servicesContainer.scrollBy({
+        top: 0,
+        left: scrollStep,
+        behavior: 'smooth'
     });
 });
