@@ -1,28 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Slider functionality
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const sliderNextBtn = document.querySelector('.slider-next-btn');
-    const sliderPrevBtn = document.querySelector('.slider-prev-btn');
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
-        });
-    }
-
-    sliderNextBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    });
-
-    sliderPrevBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    });
-
-    showSlide(currentSlide);
-
+    // Slider functionality is handled by Bootstrap
     // Services functionality
     const servicesContent = document.querySelector('.services-content');
     const servicesNextBtn = document.querySelector('.services-next-btn');
