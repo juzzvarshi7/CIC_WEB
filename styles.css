@@ -1,263 +1,174 @@
-/* General Styles */
+/* Global Styles */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1;
+    float: left;
+}
+
+nav {
+    float: right;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 nav ul li {
-    margin-right: 20px;
+    display: inline;
+    margin-left: 10px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
 }
 
-.header-right {
-    display: flex;
-    align-items: center;
-}
-
-.header-right input {
-    margin-right: 10px;
-}
-
-.header-right a img {
-    height: 25px; /* Adjust the height of the LinkedIn logo */
-    margin-right: 1rem;
-}
-
-.side-menu {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #333;
-    color: white;
-    transition: left 0.3s;
-}
-
-.side-menu-content {
-    padding: 20px;
-}
-
-.side-menu h2 {
-    margin-top: 0;
-}
-
-#menu-btn, #close-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-main {
-    padding: 20px;
-}
-
-.slider {
-    position: relative;
-    overflow: hidden;
-}
-
-.slide {
-    display: none;
-    position: relative;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-}
-
-.slide-content {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-}
-
-.slider-prev-btn, .slider-next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-    z-index: 10;
-}
-
-.slider-prev-btn {
-    left: 10px;
-}
-
-.slider-next-btn {
-    right: 10px;
-}
-
-.recent-progress {
-    margin-top: 20px;
-}
-
-.ticker {
-    background-color: #f2f2f2;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.progress-content {
-    display: flex;
-    justify-content: space-between;
-}
-
-.progress-item {
-    width: 30%;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-.services-overview {
-    margin-top: 40px;
-    position: relative;
-}
-
-.services-title {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.services-content {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-}
-
-.service-box {
-    width: calc(33.33% - 40px);
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-.services-prev-btn, .services-next-btn {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: black;
-    z-index: 10;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.service-box img{
-    max-height: 150px;
-}
-
-.services-prev-btn {
-    left: 0;
-}
-
-.services-next-btn {
-    right: 0;
-}
-
-.product-boxes {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.product-box {
-    width: 30%;
-    background: #FDB813;
-    margin: 1.5%;
-    border-radius: 5px;
-    text-align: center;
-    flex: 1;
-    margin: 0 0.5rem;
-}
-
-.product-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 1rem;
-}
-
-.product-details {
-    display: none;
-    text-align: center;
+nav ul li a:hover {
+    background-color: #0056b3;
 }
 
 footer {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Slider Styles */
+#slider {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+}
+
+.slider-container {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    overflow-x: hidden;
 }
 
-footer ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
+.slide {
+    flex: 0 0 100%;
+    padding: 0 20px;
 }
 
-footer ul li {
-    margin-left: 20px;
+.slide h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-footer ul li a {
-    color: white;
-    text-decoration: none;
+.slide p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .read-more-btn {
-    color: #F26D21;
-    background-color: transparent; /* Assuming you want just the text color changed */
-    border: 2px solid #F26D21; /* If there's a border, to match the text color */
-    padding: 10px 20px;
-    text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .read-more-btn:hover {
-    background-color: #F26D21;
-    color: white; /* Change the text color on hover if needed */
-    padding: 0.5rem 1rem; /* Adjust padding as needed */
-    border: none; /* Remove border */
-    font-size: 14px; /* Adjust font size */
-    text-decoration: none; /* Remove underline */
+    background-color: #0056b3;
 }
 
-.read-more-btn:hover {
-    background-color: #E25D15; /* Change background color on hover */
+/* Recent News Section */
+#recent-news {
+    background-color: #ffc107;
+    padding: 50px 0;
+}
+
+.yellow-box {
+    background-color: #ffc107;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.recent-news {
+    flex: 1;
+}
+
+.recent-news h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.recent-news p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.yellow-box img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Services Section Styles */
+#services {
+    padding: 50px 0;
+    background-color: #f0f0f0;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.service-card {
+    flex: 0 0 50%;
+    padding: 20px;
+    min-width: 300px;
+    scroll-snap-align: start;
+}
+
+.services-prev-btn,
+.services-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.services-prev-btn {
+    left: 10px;
+}
+
+.services-next-btn {
+    right: 10px;
 }
