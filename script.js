@@ -25,16 +25,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Services functionality
     const servicesContent = document.querySelector('.services-content');
+    const serviceBoxes = document.querySelectorAll('.service-box');
     const servicesNextBtn = document.querySelector('.services-next-btn');
     const servicesPrevBtn = document.querySelector('.services-prev-btn');
 
+    let currentServiceIndex = 0;
+    const servicesToShow = 4;
+    const totalServices = serviceBoxes.length;
+
+    function updateCarousel() {
+        const offset = -currentServiceIndex * 100 / servicesToShow;
+        servicesContent.style.transform = `translateX(${offset}%)`;
+    }
+
     servicesNextBtn.addEventListener('click', () => {
-        servicesContent.scrollLeft += servicesContent.clientWidth;
+        currentServiceIndex = (currentServiceIndex + 1) % totalServices;
+        updateCarousel();
     });
 
     servicesPrevBtn.addEventListener('click', () => {
-        servicesContent.scrollLeft -= servicesContent.clientWidth;
+        currentServiceIndex = (currentServiceIndex - 1 + totalServices) % totalServices;
+        updateCarousel();
     });
+
+    updateCarousel();
 
     // Side menu functionality
     const sideMenu = document.getElementById('side-menu');
