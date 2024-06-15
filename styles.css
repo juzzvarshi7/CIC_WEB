@@ -107,7 +107,7 @@ main {
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: white;
+    color: black;
     z-index: 10;
 }
 
@@ -141,8 +141,8 @@ main {
 }
 
 .services-overview {
-    margin-top: 40px;
     position: relative;
+    margin-top: 40px;
 }
 
 .services-title {
@@ -157,36 +157,59 @@ main {
 }
 
 .service-box {
-    min-width: 33.33%; /* Adjusted from 33.33% - 40px */
+    background-color: #fff;
+    border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
-    margin: 0 auto;
+    width: calc(25% - 20px); /* Adjust the width to display four boxes per row */
     margin-bottom: 20px;
-    box-sizing: border-box;
 }
 
-.service-prev-btn, .service-next-btn {
+
+/* Styles for the images inside service boxes */
+.service-box img {
+    max-width: 100%; /* Ensure images fit within the box */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for the headings and paragraphs */
+.service-box h3 {
+    font-size: 1.5em; /* Adjust the font size */
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+.service-box p {
+    font-size: 1em; /* Adjust the font size */
+    color: #333; /* Set text color */
+}
+
+.services-overview {
+     position: relative;
+}
+
+.services-prev-btn, .services-next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
     border: none;
-    font-size: 2rem;
+    padding: 10px;
     cursor: pointer;
-    color: black;
-    z-index: 10;
 }
 
-.service-prev-btn {
+.services-prev-btn {
     left: 10px;
 }
 
-.service-next-btn {
+.services-next-btn {
     right: 10px;
 }
 
-.services-next-btn {
-    right: 0;
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .product-boxes {
@@ -261,3 +284,5 @@ footer ul li a {
 .read-more-btn:hover {
     background-color: #E25D15; /* Change background color on hover */
 }
+
+
