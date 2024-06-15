@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalServices = serviceBoxes.length;
 
     function updateCarousel() {
-        const offset = -currentServiceIndex * 100 / servicesToShow;
+        const offset = -currentServiceIndex * (100 / servicesToShow);
         servicesContent.style.transform = `translateX(${offset}%)`;
     }
 
@@ -49,6 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     updateCarousel();
+
+    // Continuous Carousel Logic for Services Section
+    function startServicesCarousel() {
+        setInterval(() => {
+            currentServiceIndex = (currentServiceIndex + 1) % totalServices;
+            updateCarousel();
+        }, 5000); // Adjust the interval (in milliseconds) as per your preference
+    }
+
+    startServicesCarousel();
 
     // Side menu functionality
     const sideMenu = document.getElementById('side-menu');
