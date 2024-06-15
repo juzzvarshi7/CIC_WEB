@@ -152,12 +152,12 @@ main {
 
 .services-content {
     display: flex;
-    overflow: hidden;
+    overflow: hidden; /* Disable horizontal overflow */
     position: relative;
 }
 
 .service-box {
-    width: calc(33.33% - 40px);
+    min-width: 33.33%; /* Adjusted from 33.33% - 40px */
     padding: 20px;
     text-align: center;
     margin: 0 auto;
@@ -165,24 +165,24 @@ main {
     box-sizing: border-box;
 }
 
-.services-prev-btn, .services-next-btn {
+.service-prev-btn, .service-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background: none;
     border: none;
     font-size: 2rem;
     cursor: pointer;
     color: black;
     z-index: 10;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
-.service-box img{
-    max-height: 150px;
+.service-prev-btn {
+    left: 10px;
 }
 
-.services-prev-btn {
-    left: 0;
+.service-next-btn {
+    right: 10px;
 }
 
 .services-next-btn {
