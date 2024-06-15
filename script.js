@@ -34,7 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalServices = serviceBoxes.length;
 
     function updateCarousel() {
-        const offset = -currentServiceIndex * (100 / servicesToShow);
+        let offset = -currentServiceIndex * (100 / servicesToShow);
+        if (currentServiceIndex + servicesToShow > totalServices) {
+            offset = -(totalServices * (100 / servicesToShow - 1)) + (currentServiceIndex * (100 / servicesToShow));
+        }
         servicesContent.style.transform = `translateX(${offset}%)`;
     }
 
@@ -47,8 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentServiceIndex = (currentServiceIndex - 1 + totalServices) % totalServices;
         updateCarousel();
     });
-
-    updateCarousel();
 
     // Continuous Carousel Logic for Services Section
     function startServicesCarousel() {
@@ -67,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuBtn.addEventListener('click', () => {
         sideMenu.style.left = '0';
+        sideMenu.style.zIndex = '101'; // Ensure side menu appears above other content
     });
 
     closeBtn.addEventListener('click', () => {
