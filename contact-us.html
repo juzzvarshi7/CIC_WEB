@@ -9,6 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            height: 100%;
+        }
+        
         body {
             font-family: 'Open Sans', sans-serif;
             transform: scale(0.8);
@@ -17,6 +21,7 @@
             display: flex;
             flex-direction: column;
         }
+        
         .main-container {
             max-width: 1200px;
             margin: 20px auto;
@@ -24,6 +29,7 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        
         header {
             background-color: #343a40;
             color: #ffffff;
@@ -31,16 +37,19 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        
         header h1 {
             font-size: 32px;
             font-weight: bold;
             margin-bottom: 0;
         }
+        
         .info-boxes {
             display: flex;
             justify-content: space-around;
             margin: 20px 0;
         }
+        
         .info-box {
             background: #f8f9fa;
             padding: 20px;
@@ -50,9 +59,11 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        
         .info-box h3 {
             margin-top: 10px;
         }
+        
         .contact-form {
             background: #fff;
             padding: 40px;
@@ -60,23 +71,27 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
+        
         .contact-form h2 {
             margin-bottom: 20px;
         }
+        
         footer {
             background-color: #343a40;
             color: #ffffff;
             padding: 20px 0;
-            margin-top: 20px;
+            margin-top: auto;
         }
+        
         footer a {
             color: #cccccc;
             text-decoration: none;
         }
+        
         footer a:hover {
             color: #ffffff;
             text-decoration: underline;
-        }
+        }        
     </style>
 </head>
 <body>
@@ -135,30 +150,30 @@
         <div class="contact-form">
             <h2>Ready to Get Started?</h2>
             <p>You may simply complete the form below and click SEND MESSAGE to submit an enquiry. Our customer service team will get in touch with you within 2 business days.</p>
-            <form>
+            <form action="YOUR_DEPLOYED_WEB_APP_URL" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="firstName">First Name</label>
-                        <input type="text" class="form-control" id="firstName">
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="lastName">Last Name</label>
-                        <input type="text" class="form-control" id="lastName">
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="subject">Subject</label>
-                        <input type="text" class="form-control" id="subject">
+                        <input type="text" class="form-control" id="subject" name="subject" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="services">Choose your Service/Products</label>
-                    <select id="services" class="form-control">
+                    <select id="services" class="form-control" name="services" required>
                         <option selected>Choose...</option>
                         <option>Service 1</option>
                         <option>Service 2</option>
@@ -167,14 +182,14 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="5"></textarea>
+                    <textarea class="form-control" id="message" rows="5" name="message" required></textarea>
                 </div>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="notRobot">
+                    <input type="checkbox" class="form-check-input" id="notRobot" name="notRobot" required>
                     <label class="form-check-label" for="notRobot">I'm not a robot</label>
                 </div>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="agreeTerms">
+                    <input type="checkbox" class="form-check-input" id="agreeTerms" name="agreeTerms" required>
                     <label class="form-check-label" for="agreeTerms">I agree with the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a> and consent to sharing my information.</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Send Message</button>
@@ -182,7 +197,7 @@
         </div>
 
         <div class="mt-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.2442260155025!2d78.10157031526388!3d10.78915919231302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf4fbd610d301%3A0x312d3f5f6ebcfdb5!2sSRM%20Institute%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1625500601143!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3499190062046!2d80.24205121529908!3d12.989329790849554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526702ad77d18d%3A0x46a3e26a2a7e4f0d!2sCHG%20IT%20Consultancy%20Private%20Limited!5e0!3m2!1sen!2sin!4v1624162510651!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 
@@ -199,10 +214,10 @@
                 <div class="col-md-4">
                     <h5>Quick Links</h5>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about-us">About Us</a></li>
-                        <li><a href="#contact-us">Contact Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
