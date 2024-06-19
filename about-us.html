@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHC IT Consultancy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <title>About Us - CIC</title>
+    <style>
+        body {
+            font-family: Baskerville, 'Times New Roman', serif;
+            transform: scale(0.8);
+            transform-origin: top left;
+            width: 125%;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header, section, footer {
+            padding: 20px 0;
+        }
+
+        header {
+            background-color: #343a40;
+        }
+
+        header .navbar-brand, 
+        header .nav-link {
+            color: #ffffff;
+        }
+
+        header .nav-link:hover {
+            color: #cccccc;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #cccccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .about-header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #002d72;
+            margin-bottom: 10px;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #f0b400;
+        }
+        .mission-vision {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .mission-vision div {
+            background-color: #002d72;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .mission-vision div:last-child {
+            margin-right: 0;
+        }
+        .dynamic-content {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                    <img src="logo-placeholder.png" alt="CIC Company Logo" style="height: 40px; width: auto;">
+                    CHC IT Consultancy
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-us.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com" target="_blank">
+                                <img src="linkedin-icon.png" alt="LinkedIn" style="height: 24px; width: auto;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="main-container">
+        <img src="about-us.png" class="img-fluid">
+        <div class="about-header">ABOUT US</div>
+        <div class="content">
+            <p><strong>CIC is a fast-growing innovative I.T. company predominantly servicing Japanese companies with an approach towards high productivity and high quality in the emerging software technologies.</strong></p>
+            <p>We are a subsidiary of a Japanese Information Technology company offering futuristic services and solutions in various fields of Web Applications, Mobile Apps, Artificial Intelligence, Server database management, Manufacturing Execution System Software Integration, Japanese Endowed Course Training, and Consulting.</p>
+            <p>We are an <span class="highlight">ISO-27001</span> and <span class="highlight">ISO-9001</span> certified company providing utmost importance to Information Security and Quality Management too. We provide a lot of focus on the Processes and also on upskilling our Resources to match in line with the global trend. We have imbibed the culture of being Process-oriented and Quality-oriented from our Japanese parent company. The five important Mantras we focus on are – Productivity, Quality, Delivery, Skills, and Culture.</p>
+            <p>We believe that our highly skilled Software Engineers of India can collaborate well with high-quality Japanese technologies to bring out the best innovative solutions. Our dedicated skilled Software Engineers have been consistently delivering innovative solutions to the complex software requirements of our esteemed clients.</p>
+        </div>
+        <div class="mission-vision">
+            <div onclick="showContent('mission')">MISSION</div>
+            <div onclick="showContent('vision')">VISION</div>
+        </div>
+        <div class="dynamic-content" id="mission">
+            <p>To provide innovative IT related solutions and services to our customers with a futuristic outlook.</p>
+        </div>
+        <div class="dynamic-content" id="vision">
+            <p>To be a globally recognized company delivering high-quality technology solutions and continuously innovating to meet future demands.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>STPI Technology Incubation Centre,</p>
+                    <p>2nd Floor, No.5, Rajiv Gandhi Salai,</p>
+                    <p>Taramani, Chennai – 600113,</p>
+                    <p>Tamil Nadu, INDIA</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 CHC IT Consultancy. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function showContent(type) {
+            document.getElementById('mission').style.display = 'none';
+            document.getElementById('vision').style.display = 'none';
+            
+            if (type === 'mission') {
+                document.getElementById('mission').style.display = 'block';
+            } else if (type === 'vision') {
+                document.getElementById('vision').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

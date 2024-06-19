@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHC IT Consultancy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        body {
+            font-family: Baskerville, 'Times New Roman', serif;
+            transform: scale(0.8);
+            transform-origin: top left;
+            width: 125%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, section, footer {
+            padding: 20px 0;
+        }
+
+        header {
+            background-color: #343a40;
+        }
+
+        header .navbar-brand, 
+        header .nav-link {
+            color: #ffffff;
+        }
+
+        header .nav-link:hover {
+            color: #cccccc;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #cccccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .carousel-control-prev .carousel-control-prev-icon,
+        .carousel-control-next .carousel-control-next-icon {
+            background-color: blue; /* Change to your desired color */
+        }
+
+        .carousel-control-prev .carousel-control-prev-icon {
+            margin-right: 120px;
+        }
+
+        .carousel-control-next .carousel-control-next-icon {
+            margin-left: 120px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        p {
+            font-family: Arial, sans-serif; /* Use Arial for paragraphs */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                    <img src="logo-placeholder.png" alt="CIC Company Logo" style="height: 40px; width: auto;">
+                    CHC IT Consultancy
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contact-us">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com" target="_blank">
+                                <img src="linkedin-icon.png" alt="LinkedIn" style="height: 24px; width: auto;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="ai-service" class="my-5">
+            <div class="container">
+                <h2>Artificial Intelligence Services</h2><br>
+                <p>Technology Stack:</p>
+                <img src="ai-image.png" alt="Artificial Intelligence" class="img-fluid my-3">
+                <p>At CHC IT Consultancy, we specialize in harnessing Artificial Intelligence to optimize business processes and decision-making. Our AI solutions range from machine learning algorithms to natural language processing applications, designed to meet the specific needs of our clients.</p>
+                <p>Whether you're looking to automate routine tasks, analyze big data for actionable insights, or enhance customer interactions with AI-powered chatbots, our team of experts is here to guide you through every step of implementation and integration.</p>
+                <p>Contact us today to explore how Artificial Intelligence can transform your business.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>STPI Technology Incubation Centre,</p>
+                    <p>2nd Floor, No.5, Rajiv Gandhi Salai,</p>
+                    <p>Taramani, Chennai – 600113,</p>
+                    <p>Tamil Nadu, INDIA</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 CHC IT Consultancy. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
